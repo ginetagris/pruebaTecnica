@@ -1,0 +1,27 @@
+<button mat-raised-button routerLink="/detail" color="primary">Nuevo</button>
+<div class="basic-container">
+  <mat-grid-list cols="2" rowHeight="fit" gutterSize="1px" [style.height]="'1200px'">
+    <mat-grid-tile *ngFor="let hero of heroes; last as last">
+      <mat-card [style.width]="'100%'" style="padding-bottom: 10px;">
+        <div fxLayout="row">
+          <div fxFlex fxFlexAlign="center">
+            <div fxLayout="row">
+              <strong>{{hero.id}} {{hero.name | uppercase}}</strong>
+            </div>
+            <div fxLayout="row">
+              <p>{{hero.description}}</p>
+            </div>
+          </div>
+          <div fxFlex="auto">
+            <button style="margin-right: 10px;" mat-raised-button color="primary" routerLink="/detail/{{hero.id}}">
+              <mat-icon>description</mat-icon>Editar
+            </button>
+            <button mat-raised-button color="accent" (click)="delete(hero)">
+              <mat-icon>delete</mat-icon>Borrar
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

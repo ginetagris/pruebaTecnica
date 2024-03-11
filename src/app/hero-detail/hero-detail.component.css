@@ -1,0 +1,49 @@
+/* HeroDetailComponent's private CSS styles */
+label {
+  color: #435960;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+}
+button {
+  margin-top: 20px;
+  margin-right: .5rem;
+  background-color: #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;}
+
+/* :host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+
+app-loading {
+  z-index: 999;
+  /* position: fixed; */
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top:0;
+  background: black;
+  opacity: 0.5;
+}

@@ -1,0 +1,5 @@
+<div style="padding:80px 20px 20px 20px;">
+  <h2>Mis lista</h2>
+  <app-hero-search (propagar)="procesaPropagar($event)"></app-hero-search>
+  <app-heroes *ngIf="search == ''"></app-heroes>
+</div>
